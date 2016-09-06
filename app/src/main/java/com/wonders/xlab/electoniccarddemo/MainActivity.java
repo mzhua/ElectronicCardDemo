@@ -1,8 +1,10 @@
 package com.wonders.xlab.electoniccarddemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.wonders.xlab.cardbag.CBag;
 import com.wonders.xlab.qrscanner.XQrScanner;
@@ -31,5 +33,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void scan(View view) {
         XQrScanner.getInstance().startForResult(this, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 12 && resultCode == RESULT_OK) {
+            String result = data.getStringExtra(XQrScanner.EXTRA_RESULT_BAR_OR_CODE_STRING);
+            Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+        }
     }
 }

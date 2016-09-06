@@ -9,15 +9,7 @@ minSdkVersion 15
 
 ### Android Studio
 
-1. 在project的build.gradle加入
-
-   `maven { url "https://dl.bintray.com/mzhua/maven" }`
-
-  	如图
-  	
-  	![添加maven库](art/添加maven库.png)
-
-2. 在module的build.gradle中加入依赖
+* 在module的build.gradle中加入依赖
 
    `compile 'com.wonders.xlab.cardbag:card-bag:1.0.5'`
    
@@ -26,6 +18,35 @@ minSdkVersion 15
    ![添加依赖](art/添加依赖.png)
 
 ---
+
+## 如何调用
+
+* 打开电子会员卡
+
+	```
+	CBag.get().start();
+	```
+	
+* 直接调用扫一扫
+
+	```
+	XQrScanner.getInstance().startForResult(this, 12);
+	```
+
+* 重写onActivityResult接收扫描条形码结果,返回结果为字符串（如果没有单独的调用扫描条形码模块的功能，则不需要添加）
+
+	```
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 12 && resultCode == RESULT_OK) {
+            String result = data.getStringExtra(XQrScanner.EXTRA_RESULT_BAR_OR_CODE_STRING);
+            Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+        }
+    }
+	```
+
+
 
 ## 设置自定义属性
 
