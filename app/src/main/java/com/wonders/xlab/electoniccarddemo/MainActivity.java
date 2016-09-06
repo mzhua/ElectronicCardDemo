@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void showCard(View view) {
         CBag.get()
-                .setCardSearchModel(new CardSearchModelImpl())
                 .start(this);
     }
 
