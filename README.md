@@ -11,7 +11,7 @@ minSdkVersion 15
 
 * 在module的`build.gradle`中加入依赖
 
-   `compile 'com.wonders.xlab.cardbag:card-bag:1.0.6'`
+   `compile 'com.wonders.xlab.cardbag:card-bag:1.0.6.1'`
    
    如图
    
