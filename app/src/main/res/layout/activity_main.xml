@@ -23,4 +23,16 @@
         android:layout_height="wrap_content"
         android:onClick="scan"
         android:text="扫描条形码"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fetchData"
+        android:text="取SDK数据"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveData"
+        android:text="存(同步)数据到SDK"/>
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.wonders.xlab.cardbag.CBag;
+import com.wonders.xlab.cardbag.db.CBDataSyncHelper;
 import com.wonders.xlab.qrscanner.XQrScanner;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,5 +43,20 @@ public class MainActivity extends AppCompatActivity {
             String result = data.getStringExtra(XQrScanner.EXTRA_RESULT_BAR_OR_CODE_STRING);
             Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /**
+     * 获取SDK中缓存的数据
+     * @param view
+     */
+    public void fetchData(View view) {
+        CBDataSyncHelper.getInstance(this).getAllCardsInfo();
+    }
+
+    /**
+     * 将服务器保存的数据同步缓存到SDK中
+     * @param view
+     */
+    public void saveData(View view) {
     }
 }

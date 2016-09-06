@@ -51,7 +51,7 @@
 -keepclassmembers class * extends android.app.Activity {
    public void *(android.view.View);
 }
-
+-keep class sun.misc.Unsafe
 # 不混淆枚举类型
 -keepclassmembers enum * {
     public static **[] values();
@@ -86,8 +86,8 @@
 -dontwarn android.support.**
 
 # 不混淆第三方jar包
--dontshrink
--dontoptimize
+#-dontshrink
+#-dontoptimize
 
 # Keep GSON stuff
 -keep class sun.misc.Unsafe { *; }
@@ -99,17 +99,20 @@
 #-keep public class com.google.vending.licensing.ILicensingService
 #-keep public class com.android.vending.licensing.ILicensingService
 
--keep class com.wonders.xlab.cardbag.** { *; }
--dontwarn com.yalantis.ucrop**
--keep class com.yalantis.ucrop** { *; }
--keep interface com.yalantis.ucrop** { *; }
-
--dontwarn okhttp3.**
--keep class okhttp3.**{*;}
-
+#-keep class com.wonders.xlab.cardbag.** { *; }
+#-dontwarn com.yalantis.ucrop**
+#-keep class com.yalantis.ucrop** { *; }
+#-keep interface com.yalantis.ucrop** { *; }
+#
+#-keep class com.android.org.conscrypt.SSLParametersImpl
+#-keep  class org.apache.harmony.xnet.provider.jsse.SSLParametersImpl
+#-dontwarn okhttp3.**
+#-keep class okhttp3.**{*;}
+#
 -dontwarn okio.**
 -keep class okio.**{*;}
-
+#
 -keep class com.squareup.** {*;}
-
--keep class cn.bingoogolapple.qrcode.** {*;}
+-dontwarn com.squareup.**
+#
+#-keep class cn.bingoogolapple.qrcode.** {*;}
