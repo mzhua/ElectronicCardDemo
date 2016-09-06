@@ -15,3 +15,15 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontshrink
+-dontwarn com.yalantis.ucrop**
+-keep class com.yalantis.ucrop** { *; }
+-keep interface com.yalantis.ucrop** { *; }
+
+-dontwarn okhttp3.**
+-keep class okhttp3.**{*;}
+
+-dontwarn okio.**
+-keep class okio.**{*;}
+
+-keep class com.squareup.** {*;}

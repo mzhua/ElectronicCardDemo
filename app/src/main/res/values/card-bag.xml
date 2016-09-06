@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cbTopBarTitleColor">@color/cbTextWhite</color>
+    <color name="cbTopBarBackground">@color/colorPrimary</color>
+    <integer name="cbTopBarGravity">@integer/cbTopBarGravityLeft</integer>
+</resources>
