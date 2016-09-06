@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.wonders.xlab.cardbag.CBag;
+import com.wonders.xlab.cardbag.data.entity.CardEntity;
 import com.wonders.xlab.cardbag.db.CBDataSyncHelper;
 import com.wonders.xlab.qrscanner.XQrScanner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void fetchData(View view) {
-        CBDataSyncHelper.getInstance(this).getAllCardsInfo();
+        CBDataSyncHelper instance = CBDataSyncHelper.getInstance(this);
+        List<CardEntity> allCardsInfo = instance.getAllCardsInfo();
+        //do something
+        instance.hasSyncCardData(true);
     }
 
     /**
@@ -58,5 +65,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void saveData(View view) {
+        List<CardEntity> datas = new ArrayList<>();
+        CBDataSyncHelper.getInstance(this).updateCardsInfo(datas);
     }
 }
