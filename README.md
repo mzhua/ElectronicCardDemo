@@ -53,7 +53,7 @@ minSdkVersion 15
 电子会员卡SDK可以自定义3个属性，主要是为了最大程度的配合APP的设计，具体可自定义属性如下
 
 属性名 |资源类型| 解释 | 默认值 | 可用值
-:----------- | :----------- | :-----------
+:----------- | :----------- | :----------- :----------- | :----------- |
 cbTopBarTitleColor|color|TopBar标题颜色（返回按钮和菜单的颜色也是随着标题颜色）|`@color/cbTextBlack `|颜色资源
 cbTopBarBackground|color|TopBar背景颜色|`@android:color/white`|颜色资源
 cbTopBarGravity|integer|TopBar标题的对其方式|`@integer/cbTopBarGravityLeft`|`@integer/cbTopBarGravityLeft`</br>`@integer/cbTopBarGravityCenter`
