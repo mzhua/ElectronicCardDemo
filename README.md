@@ -56,7 +56,7 @@ minSdkVersion 15
 ------------ | ------------- | ------------- | ------------- | -------------
 cbTopBarTitleColor | color | TopBar标题颜色（返回按钮和菜单的颜色也是随着标题颜色）| `@color/cbTextBlack` |颜色资源
 cbTopBarBackground | color | TopBar背景颜色 | `@android:color/white` | 颜色资源
-cbTopBarGravity | integer | TopBar标题的对其方式 | `@integer/cbTopBarGravityLeft` | `@integer/cbTopBarGravityLeft`、`@integer/cbTopBarGravityCenter`
+cbTopBarGravity | integer | TopBar标题的对齐方式 | `@integer/cbTopBarGravityLeft` | `@integer/cbTopBarGravityLeft`、`@integer/cbTopBarGravityCenter`
 
 ----
 
