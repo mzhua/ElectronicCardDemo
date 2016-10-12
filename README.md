@@ -19,7 +19,7 @@ minSdkVersion 15
    
    如图
    
-   ![添加依赖](img/add-card-bag-dependency-android.png)
+   ![添加依赖](art/添加依赖.png)
 
 ---
 
