@@ -1,5 +1,7 @@
 # 电子会员卡SDK使用文档
+[ ![Download](https://api.bintray.com/packages/mzhua/maven/card-bag/images/download.svg) ](https://bintray.com/mzhua/maven/card-bag/_latestVersion)
 
+[Demo地址](https://github.com/mzhua/ElectronicCardDemo)
 ## 版本支持
 minSdkVersion 15
 
@@ -11,11 +13,13 @@ minSdkVersion 15
 
 * 在module的`build.gradle`中加入依赖
 
-   `compile 'com.wonders.xlab.cardbag:card-bag:1.0.6.1'`
+   `compile 'com.wonders.xlab.cardbag:card-bag:lastestVersion'`
+   
+   ***lastestVersion就是顶部Download后面的数字***
    
    如图
    
-   ![添加依赖](art/添加依赖.png)
+   ![添加依赖](img/add-card-bag-dependency-android.png)
 
 ---
 
@@ -53,7 +57,7 @@ minSdkVersion 15
 电子会员卡SDK可以自定义3个属性，主要是为了最大程度的配合APP的设计，具体可自定义属性如下
 
  属性名 | 资源类型 | 解释 | 默认值 | 可用值
------------- | ------------- | ------------- | ------------- | -------------
+:-------------: | :-------------: | :-------------: | :-------------: | :-------------:
 cbTopBarTitleColor | `color` | TopBar标题颜色（返回按钮和菜单的颜色也是随着标题颜色）| `@color/cbTextBlack` |颜色资源
 cbTopBarBackground | `color` | TopBar背景颜色 | `@android:color/white` | 颜色资源
 cbTopBarGravity | `integer` | TopBar标题的对齐方式 | `@integer/cbTopBarGravityLeft` | `@integer/cbTopBarGravityLeft`、`@integer/cbTopBarGravityCenter`
@@ -150,8 +154,6 @@ public class CardSearchModelImpl implements CardSearchContract.Model {
 ## Proguard配置
 
 ```
--dontwarn okhttp3.**
--keep class okhttp3.**{*;}
 -dontwarn okio.**
 -keep class okio.**{*;}
 -keep class com.squareup.** {*;}
@@ -168,3 +170,4 @@ android{
     }
 }
 ```
+
